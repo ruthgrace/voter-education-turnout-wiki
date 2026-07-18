@@ -32,10 +32,21 @@ for (const p of PAPERS) {
   }
 }
 
+// Merge duplicate-topic contributions within a paper (e.g. after the
+// information-vs-mobilization pages were merged, a paper may list the same topic
+// twice); join their notes so each topic appears once.
+function dedupeContribs(p) {
+  const m = new Map();
+  for (const c of p.contributions) {
+    m.set(c.topic, m.has(c.topic) ? `${m.get(c.topic)}; ${c.note}` : c.note);
+  }
+  return [...m].map(([topic, note]) => ({ topic, note }));
+}
+
 // 2) Write one page per paper.
 mkdirSync(RESEARCH, { recursive: true });
 for (const p of PAPERS) {
-  const contribs = p.contributions
+  const contribs = dedupeContribs(p)
     .map((c) => `- [${TOPIC_LABELS[c.topic]}](${BASE}/${c.topic}/) — ${c.note}`)
     .join('\n');
   const body = `---
@@ -98,7 +109,7 @@ writeFileSync(join(RESEARCH, 'overview.mdx'), overview);
 // 4) Invert contributions → per-topic Key Research, and rewrite topic pages.
 const byTopic = new Map(Object.keys(TOPIC_LABELS).map((t) => [t, []]));
 for (const p of PAPERS) {
-  for (const c of p.contributions) byTopic.get(c.topic).push({ p, note: c.note });
+  for (const c of dedupeContribs(p)) byTopic.get(c.topic).push({ p, note: c.note });
 }
 
 let rewritten = 0;

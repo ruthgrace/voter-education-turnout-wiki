@@ -19,7 +19,6 @@ export const TOPIC_LABELS = {
   'policy-approaches/vote-by-mail-and-ballot-access': 'Vote-by-Mail and Ballot Access',
   'policy-approaches/compulsory-voting': 'Compulsory Voting',
   'key-debates/voluntary-vs-mandatory': 'Voluntary vs. Mandatory Voting',
-  'key-debates/information-vs-mobilization': 'Information vs. Mobilization',
   'key-debates/informed-voting-vs-turnout': 'Informed Voting vs. Maximum Turnout',
   'key-debates/partisan-effects': 'Partisan Effects',
 };
@@ -30,6 +29,7 @@ export const THEMES = [
   'Compulsory voting & representation',
   'Civic education & youth',
   'Information & vote choice',
+  'Cues, misinformation & ballot design',
   'Registration, access & partisan effects',
 ];
 
@@ -49,7 +49,7 @@ export const PAPERS = [
       { topic: 'interventions/door-to-door-canvassing', note: 'core evidence that personal canvassing is the most effective mobilization mode (~8-point boost)' },
       { topic: 'interventions/direct-mail', note: 'shows direct mail has small but measurable per-piece turnout effects' },
       { topic: 'interventions/phone-banking', note: 'finds impersonal commercial phone banks ineffective, setting up the later call-quality debate' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'demonstrates turnout gains from mobilization independent of new political information' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'demonstrates turnout gains from mobilization independent of new political information' },
     ],
   },
   {
@@ -77,7 +77,7 @@ export const PAPERS = [
     summary: 'Pooled eight randomized nonpartisan volunteer phone-bank experiments across six cities in 2000–2001. Volunteer calls raised turnout by about 3.8 percentage points and were cost-competitive with canvassing (roughly one additional vote per $26), challenging the earlier finding that phone calls do not work.',
     contributions: [
       { topic: 'interventions/phone-banking', note: 'evidence that personal, high-quality volunteer calls do increase turnout, revising the null phone-call finding' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'shows the personal touch, not information content, drives phone-call effectiveness' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows the personal touch, not information content, drives phone-call effectiveness' },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const PAPERS = [
     summary: 'Directly compares professional (commercial) and volunteer phone banks in randomized experiments, isolating call quality as the key variable. Unhurried, personal, high-quality calls raise turnout regardless of caller type, explaining why perfunctory commercial calls fail while engaged volunteer calls succeed.',
     contributions: [
       { topic: 'interventions/phone-banking', note: 'establishes call quality/personalization as the decisive moderator of phone-bank effectiveness' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'reinforces that manner of contact, not information, produces mobilization' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'reinforces that manner of contact, not information, produces mobilization' },
     ],
   },
   {
@@ -120,7 +120,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/social-pressure-messaging', note: 'landmark demonstration that social-pressure mail dramatically boosts turnout, scaling with pressure intensity' },
       { topic: 'interventions/direct-mail', note: 'shows mail can produce very large effects when it applies social pressure' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'evidence that normative/social incentives, not information, drive the effect' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that normative/social incentives, not information, drive the effect' },
     ],
   },
   {
@@ -134,7 +134,7 @@ export const PAPERS = [
     summary: 'A nationwide randomized field experiment (n ≈ 8,053) delivering Election Day SMS reminders in 2006. Text reminders raised turnout by about 3.0 percentage points at very low cost, and the authors argue impersonal but noticeable reminders can mobilize without social connectedness (a "noticeable reminder" theory).',
     contributions: [
       { topic: 'interventions/text-messaging', note: 'foundational experiment establishing SMS reminders as a cost-effective mobilization tool' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'supports a reminder/salience mechanism distinct from personal social connection' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'supports a reminder/salience mechanism distinct from personal social connection' },
     ],
   },
   {
@@ -176,7 +176,7 @@ export const PAPERS = [
     summary: 'A field experiment testing "cold" text messages (with no prior personal contact or opt-in interaction). Even auxiliary-interaction-free texts significantly boosted turnout, challenging the claim that social connectedness is necessary for mobilization and reinforcing a salience/reminder mechanism.',
     contributions: [
       { topic: 'interventions/text-messaging', note: 'demonstrates standalone "cold" SMS still mobilizes, strengthening the case for low-cost texting' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'evidence that a noticeable prompt, not social connection or information, can suffice' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that a noticeable prompt, not social connection or information, can suffice' },
     ],
   },
   {
@@ -227,7 +227,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'flagship large-scale experiment showing social-media civic nudges can mobilize turnout' },
       { topic: 'interventions/social-pressure-messaging', note: 'demonstrates the "social" (peer-visibility) message outperforms a purely informational one' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'evidence that mobilization framing plus social cues, not information alone, drives turnout' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that mobilization framing plus social cues, not information alone, drives turnout' },
     ],
   },
   {
@@ -242,7 +242,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'replicates social-media mobilization effects in a presidential-year context' },
       { topic: 'interventions/social-pressure-messaging', note: 'confirms peer-visibility cues generate contagion-based turnout gains' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'reinforces that social mobilization cues, not information, produce the effect' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'reinforces that social mobilization cues, not information, produce the effect' },
     ],
   },
   {
@@ -256,7 +256,7 @@ export const PAPERS = [
     summary: 'Two field experiments randomly targeted constituents with high-volume Facebook advertising for candidates, then measured recall, name recognition, and favorability via ostensibly unrelated phone surveys. Exposed voters were in some cases more likely to recall ads but no more likely to recognize or positively evaluate the candidates, providing early evidence that online display ads have minimal persuasive/awareness effects.',
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'early rigorous null on the persuasive/recognition effects of online display ads' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'shows digital ad exposure did not translate into changed candidate evaluations' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows digital ad exposure did not translate into changed candidate evaluations' },
     ],
   },
   {
@@ -269,7 +269,7 @@ export const PAPERS = [
     theme: 'Digital outreach & persuasion',
     summary: 'A meta-analysis of 40 field experiments plus nine new original experiments finds the best estimate of the average effect of campaign contact and advertising on candidate choice in general elections is approximately zero. Persuasive effects can appear earlier in campaigns, in primaries/ballot measures, or when messaging engages unfamiliar issues, but general-election persuasion via contact and ads is minimal.',
     contributions: [
-      { topic: 'key-debates/information-vs-mobilization', note: 'cornerstone "minimal effects" statement distinguishing persuasion from mobilization' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'cornerstone "minimal effects" statement distinguishing persuasion from mobilization' },
       { topic: 'interventions/overview', note: 'synthesizes the persuasive impact of contact and advertising across many interventions' },
       { topic: 'interventions/digital-and-social-media-ads', note: 'includes advertising among channels found to have near-zero general-election persuasion' },
       { topic: 'interventions/door-to-door-canvassing', note: 'canvassing among the contact modes estimated to have minimal persuasive (as opposed to mobilizing) effect' },
@@ -286,7 +286,7 @@ export const PAPERS = [
     summary: 'Across 59 real-time survey experiments testing 49 different 2016 presidential ads on ~34,000 people over 29 weeks, political ads produced small average persuasive effects (roughly 0.05 points on a 100-point candidate-support scale). Effects were consistently small regardless of party, message, prior beliefs, or timing, undercutting the "heterogeneity" explanation that ads work well in specific circumstances.',
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'large evidence base that advertising persuasion is uniformly small' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'supports the minimal-persuasion view of campaign messaging' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'supports the minimal-persuasion view of campaign messaging' },
       { topic: 'key-debates/partisan-effects', note: 'shows small effects hold across partisan senders and receivers' },
     ],
   },
@@ -301,7 +301,7 @@ export const PAPERS = [
     summary: 'A ZIP-code-level randomized field experiment ran Democratic-leaning Facebook/Instagram ads (seen 1.1+ million times) during the 2018 Florida midterms. Estimated effects on Democratic vote share were essentially zero (−0.04 percentage points, SE 0.85), reinforcing that digital advertising has minimal persuasive effect on vote choice in competitive races.',
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'field (behavioral, not survey) null on digital ad persuasion of actual vote share' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'evidence that digital ad exposure does not shift electoral outcomes' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that digital ad exposure does not shift electoral outcomes' },
       { topic: 'key-debates/partisan-effects', note: 'partisan-targeted ads failed to move partisan vote share' },
     ],
   },
@@ -316,7 +316,7 @@ export const PAPERS = [
     summary: 'An $8.9 million, 8-month social-media advertising program targeted ~2 million persuadable voters in five battleground states during the 2020 US presidential election, aiming to boost anti-Trump/pro-Biden turnout. The program produced no detectable average effect on turnout, providing a large-scale behavioral null for digital mobilization advertising.',
     contributions: [
       { topic: 'interventions/digital-and-social-media-ads', note: 'largest campaign-wide field test showing near-zero average turnout effect of digital ads' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'digital advertising did not mobilize turnout at scale' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'digital advertising did not mobilize turnout at scale' },
       { topic: 'interventions/overview', note: 'benchmark for the limited real-world impact of paid digital outreach' },
     ],
   },
@@ -331,7 +331,7 @@ export const PAPERS = [
     summary: 'In a randomized field experiment, 56 canvassers held ~10-minute perspective-taking ("deep canvassing") conversations with 501 voters in South Florida about transgender rights. A single conversation markedly reduced anti-transgender prejudice, with effects persisting at least three months and exceeding the average decline in US homophobia from 1998–2012.',
     contributions: [
       { topic: 'interventions/door-to-door-canvassing', note: 'foundational deep-canvassing experiment showing durable attitude change via face-to-face conversation' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'demonstrates persuasion (attitude change) is achievable through interpersonal, non-argumentative contact' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'demonstrates persuasion (attitude change) is achievable through interpersonal, non-argumentative contact' },
       { topic: 'interventions/overview', note: 'landmark for persuasion-via-conversation as a distinct mechanism from turnout mobilization' },
     ],
   },
@@ -346,7 +346,7 @@ export const PAPERS = [
     summary: 'Three pre-registered field experiments (230 canvassers, 6,869 voters, 7 US locations) tested deep canvassing on attitudes toward unauthorized immigrants and transgender people. Argument-only conversations had no effect, but conversations adding non-judgmental exchange of personal narratives durably reduced exclusionary attitudes for at least four months, supporting the scalability of the approach.',
     contributions: [
       { topic: 'interventions/door-to-door-canvassing', note: 'establishes narrative exchange (not argumentation) as the active ingredient in deep canvassing, and shows replicability' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'argument-only (informational) contact failed while perspective-taking succeeded' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'argument-only (informational) contact failed while perspective-taking succeeded' },
       { topic: 'interventions/overview', note: 'reinforces interpersonal conversation as a durable persuasion tool' },
     ],
   },
@@ -591,7 +591,7 @@ export const PAPERS = [
       { topic: 'interventions/school-based-civic-education', note: 'reframes civic education toward noncognitive skill-building rather than knowledge alone' },
       { topic: 'policy-approaches/civic-education-mandates', note: 'motivates curricular reform as turnout policy' },
       { topic: 'policy-approaches/automatic-voter-registration', note: 'argues institutional barrier reduction converts intention into action' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'locates the youth problem in follow-through, not information or interest' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'locates the youth problem in follow-through, not information or interest' },
     ],
   },
   {
@@ -634,7 +634,7 @@ export const PAPERS = [
     theme: 'Civic education & youth',
     summary: 'Randomized GOTV (mail and face-to-face canvassing) among ~25,000 registered voters before the 1998 election, then tracks turnout in 1999. Using the 1998 treatment as an instrument, estimates that voting in one election raises the probability of voting in the next by roughly 47 percentage points — strong evidence that turnout is habit-forming.',
     contributions: [
-      { topic: 'key-debates/information-vs-mobilization', note: 'foundational habit-formation result underpinning why early mobilization compounds over time' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'foundational habit-formation result underpinning why early mobilization compounds over time' },
       { topic: 'interventions/door-to-door-canvassing', note: 'canvassing as the mobilizing treatment with downstream persistence' },
       { topic: 'interventions/direct-mail', note: 'mail as an experimental treatment arm' },
       { topic: 'interventions/overview', note: 'establishes downstream/persistent returns to any turnout intervention' },
@@ -650,7 +650,7 @@ export const PAPERS = [
     theme: 'Civic education & youth',
     summary: 'Using validated turnout data, shows that the youngest first-time-eligible voters actually turn out at higher rates than slightly older first-timers, because early voting occurs while youth are still embedded in parental/school social contexts. Supports lowering the voting age / early first experiences to seed lifelong voting habits.',
     contributions: [
-      { topic: 'key-debates/information-vs-mobilization', note: 'social embeddedness at the first election as a mobilization mechanism for habit formation' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'social embeddedness at the first election as a mobilization mechanism for habit formation' },
       { topic: 'policy-approaches/overview', note: 'informs voting-age and timing-of-first-vote policy debates' },
       { topic: 'interventions/school-based-civic-education', note: 'supports school/home context as a springboard for first-vote habit formation' },
     ],
@@ -667,7 +667,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/school-based-civic-education', note: 'evidence that civics classes reduce inequality in political engagement' },
       { topic: 'policy-approaches/civic-education-mandates', note: 'supports mandated civics as an equity lever' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'civic education as a compensatory socialization channel' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'civic education as a compensatory socialization channel' },
     ],
   },
   {
@@ -760,7 +760,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'defines the "correct voting" standard for whether votes match voters\' informed preferences' },
       { topic: 'interventions/voter-guides-and-information', note: 'establishes the outcome metric (correct voting) that information interventions aim to improve' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'reframes democratic competence around decision quality rather than knowledge quantity' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'reframes democratic competence around decision quality rather than knowledge quantity' },
     ],
   },
   {
@@ -805,7 +805,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'argues information does little to change identity-driven vote choice, a skeptical bookend to the correct-voting literature' },
       { topic: 'key-debates/partisan-effects', note: 'centers partisan/group identity as the driver of vote choice' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'questions whether informing voters meaningfully changes outcomes' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'questions whether informing voters meaningfully changes outcomes' },
     ],
   },
   {
@@ -818,7 +818,7 @@ export const PAPERS = [
     theme: 'Information & vote choice',
     summary: 'Exploits a Copenhagen decentralization pilot in which four representative districts were assigned local administration while others were not, then compares turnout in a citywide referendum. Finds that being informed (through direct experience with the treated policy) causally increased turnout, giving rare quasi-experimental evidence that information boosts participation.',
     contributions: [
-      { topic: 'key-debates/information-vs-mobilization', note: 'causal evidence that information itself raises turnout, not just vote choice' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'causal evidence that information itself raises turnout, not just vote choice' },
       { topic: 'interventions/voter-guides-and-information', note: 'supports information provision as a turnout lever' },
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'connects the information environment to participation' },
     ],
@@ -833,7 +833,7 @@ export const PAPERS = [
     theme: 'Information & vote choice',
     summary: 'Uses 1997 British Election Study data and instrumental-variable strategies to estimate the effect of political knowledge on turnout. Finds information is among the strongest predictors of participation — raising knowledge one standard deviation increases the probability of voting by roughly 6 percentage points — while addressing endogeneity between knowledge and voting.',
     contributions: [
-      { topic: 'key-debates/information-vs-mobilization', note: 'quantifies political knowledge as a major driver of turnout' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'quantifies political knowledge as a major driver of turnout' },
       { topic: 'interventions/voter-guides-and-information', note: 'motivates information-based interventions to raise participation' },
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'links knowledge to the decision to vote' },
     ],
@@ -849,7 +849,7 @@ export const PAPERS = [
     summary: 'Reviews and maps the research literature on voting advice applications (VAAs) — online tools that match users\' issue positions to parties/candidates — and sets out a comparative research agenda. Synthesizes evidence on why VAAs spread across Europe and their emerging effects on political knowledge, turnout, and vote choice.',
     contributions: [
       { topic: 'interventions/voter-guides-and-information', note: 'foundational review of VAAs as a scalable information/matching intervention' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'surveys VAA effects on both informing voters and mobilizing turnout' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'surveys VAA effects on both informing voters and mobilizing turnout' },
       { topic: 'interventions/digital-and-social-media-ads', note: 'situates VAAs within online political information tools' },
     ],
   },
@@ -864,7 +864,7 @@ export const PAPERS = [
     summary: 'Uses Dutch survey data and selection-into-treatment (matching/propensity) methods to isolate the causal effect of VAA usage on turnout, addressing self-selection problems in earlier work. Estimates that VAA use accounted for about four percent of reported turnout, evidence that these information tools modestly raise participation.',
     contributions: [
       { topic: 'interventions/voter-guides-and-information', note: 'quasi-causal evidence that a voter-information tool increases turnout' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'shows an information intervention can double as a mobilization tool' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows an information intervention can double as a mobilization tool' },
       { topic: 'interventions/digital-and-social-media-ads', note: 'evaluates a digital tool\'s effect on participation' },
     ],
   },
@@ -880,7 +880,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'articulates the aggregation argument that collective opinion can be competent despite individual ignorance' },
       { topic: 'interventions/voter-guides-and-information', note: 'frames how information moves collective (not just individual) preferences' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'foundational reference for whether informing individuals matters at the aggregate level' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'foundational reference for whether informing individuals matters at the aggregate level' },
     ],
   },
   {
@@ -895,7 +895,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'origin of the "miracle of aggregation" concept central to debates on voter competence' },
       { topic: 'interventions/voter-guides-and-information', note: 'frames the theoretical stakes of unequal information distribution' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'grounds whether individual-level information matters given aggregation' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'grounds whether individual-level information matters given aggregation' },
     ],
   },
 
@@ -911,7 +911,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/voter-guides-and-information', note: 'experimental evidence that an issue voter guide disproportionately helps uninformed voters, narrowing the informed/uninformed gap' },
       { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows information tools can move uninformed voters\' choices closer to their policy views, improving the match between votes and preferences' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'an information intervention that changes the quality and expression of votes rather than turnout' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'an information intervention that changes the quality and expression of votes rather than turnout' },
     ],
   },
 
@@ -970,7 +970,7 @@ export const PAPERS = [
     contributions: [
       { topic: 'policy-approaches/vote-by-mail-and-ballot-access', note: 'early voting alone can reduce turnout absent complementary reforms' },
       { topic: 'policy-approaches/automatic-voter-registration', note: 'same-day/Election Day registration reliably increases turnout' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'reforms interact with campaign mobilization, sometimes perversely' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'reforms interact with campaign mobilization, sometimes perversely' },
     ],
   },
   {
@@ -1057,9 +1057,130 @@ export const PAPERS = [
     contributions: [
       { topic: 'interventions/door-to-door-canvassing', note: 'experimental evidence that registration canvassing adds new voters' },
       { topic: 'policy-approaches/automatic-voter-registration', note: 'clarifies how much registration barriers, not just motivation, limit participation' },
-      { topic: 'key-debates/information-vs-mobilization', note: 'mobilizing registration produces net new participation' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'mobilizing registration produces net new participation' },
     ],
   },
+  // ----- Added: cues/tools that move votes toward preferences -----
+  {
+    slug: 'lupia-1994-shortcuts-encyclopedias',
+    short: 'Lupia (1994)',
+    title: 'Lupia (1994): Shortcuts Versus Encyclopedias',
+    citation: 'Lupia, Arthur. 1994. "Shortcuts Versus Encyclopedias: Information and Voting Behavior in California Insurance Reform Elections." American Political Science Review 88(1): 63–76.',
+    url: 'https://doi.org/10.2307/2944882',
+    year: 1994,
+    theme: 'Information & vote choice',
+    summary: 'Analyzing survey data from voters facing five complex 1988 California insurance ballot initiatives, Lupia shows that poorly informed voters who knew only the positions of relevant interest groups (e.g., the insurance industry) cast votes resembling those of encyclopedically informed voters. The study is foundational evidence for "low-information rationality" — that widely available information shortcuts let uninformed voters emulate well-informed choices.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'canonical evidence that endorsement/interest-group cues let low-information voters mimic informed ballot-measure choices' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'central to the debate over whether encyclopedic knowledge is necessary for competent voting' },
+      { topic: 'policy-approaches/overview', note: 'implies information environments, not just voter knowledge, shape vote quality' },
+    ],
+  },
+  {
+    slug: 'lupia-mccubbins-1998-democratic-dilemma',
+    short: 'Lupia & McCubbins (1998)',
+    title: 'Lupia & McCubbins (1998): The Democratic Dilemma',
+    citation: 'Lupia, Arthur, and Mathew D. McCubbins. 1998. The Democratic Dilemma: Can Citizens Learn What They Need to Know? Cambridge: Cambridge University Press.',
+    url: 'https://www.cambridge.org/9780521585934',
+    year: 1998,
+    theme: 'Information & vote choice',
+    summary: 'Combining formal theory with laboratory experiments, the book specifies the conditions under which citizens with limited information can nonetheless make the same reasoned choices they would make if fully informed — chiefly when a speaker is both knowledgeable and perceived as trustworthy (sharing interests or facing verification/penalties for lying). It reframes competence as a property of the information environment and the persuasion relationship rather than raw voter knowledge.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'theoretical foundation for when cues and endorsements can substitute for detailed information' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'argues limited information need not prevent reasoned, preference-congruent choices' },
+      { topic: 'policy-approaches/overview', note: 'draws institutional-design implications for structuring trustworthy information sources' },
+    ],
+  },
+  {
+    slug: 'boudreau-2009-closing-the-gap',
+    short: 'Boudreau (2009)',
+    title: 'Boudreau (2009): Closing the Gap',
+    citation: 'Boudreau, Cheryl. 2009. "Closing the Gap: When Do Cues Eliminate Differences between Sophisticated and Unsophisticated Citizens?" Journal of Politics 71(3): 964–976.',
+    url: 'https://doi.org/10.1017/S0022381609090823',
+    year: 2009,
+    theme: 'Information & vote choice',
+    summary: 'A laboratory experiment tests when a single cue (an endorser\'s statement) lets both sophisticated and unsophisticated subjects improve their decisions. When the endorser always has an incentive to tell the truth, the cue sharply improves decisions and closes the sophistication gap; when the endorser may have an incentive to lie, unsophisticated subjects still improve enough to match sophisticated subjects. Cue effectiveness thus depends jointly on the endorser\'s incentives and the voter\'s prior sophistication.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'shows a single trustworthy endorsement cue can raise low-sophistication voters\' decision quality to the level of high-sophistication voters' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that cues can substitute for encyclopedic information in producing better-matched votes' },
+      { topic: 'key-debates/partisan-effects', note: 'endorser incentives (truth-telling vs. incentive to lie) condition when cues help versus mislead' },
+    ],
+  },
+  {
+    slug: 'arceneaux-kolodny-2009-educating-least-informed',
+    short: 'Arceneaux & Kolodny (2009)',
+    title: 'Arceneaux & Kolodny (2009): Educating the Least Informed',
+    citation: 'Arceneaux, Kevin, and Robin Kolodny. 2009. "Educating the Least Informed: Group Endorsements in a Grassroots Campaign." American Journal of Political Science 53(4): 755–770.',
+    url: 'https://doi.org/10.1111/j.1540-5907.2009.00399.x',
+    year: 2009,
+    theme: 'Information & vote choice',
+    summary: 'A field experiment during two competitive 2006 Pennsylvania statehouse races, in which a liberal interest group canvassed both core supporters and likely-likeminded Republicans, tests whether group endorsements help uninformed voters vote consistent with their predispositions. The endorsement cue moved the least politically aware, ideologically-aligned voters toward the endorsed candidate — but cue effects depended on voters recognizing the group\'s relevance.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'real-world field evidence that group endorsements can align low-information voters with their own predispositions' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'tests the low-information-rationality claim in an actual campaign, distinguishing informational cue effects from turnout mobilization' },
+    ],
+  },
+  {
+    slug: 'bullock-2011-elite-influence-informed-electorate',
+    short: 'Bullock (2011)',
+    title: 'Bullock (2011): Elite Influence on Public Opinion in an Informed Electorate',
+    citation: 'Bullock, John G. 2011. "Elite Influence on Public Opinion in an Informed Electorate." American Political Science Review 105(3): 496–515.',
+    url: 'https://doi.org/10.1017/S0003055411000165',
+    year: 2011,
+    theme: 'Information & vote choice',
+    summary: 'Two experiments manipulate both party cues and detailed policy information. When people have policy information, their attitudes are affected at least as much by that information as by party-elite cues, and party cues do not inhibit substantive thinking about the policy. Reviewing prior studies, Bullock notes party-cue effects moved support by 3–43% of the preference scale, but policy information exerted comparable or larger effects.',
+    contributions: [
+      { topic: 'key-debates/partisan-effects', note: 'shows policy information rivals or exceeds party-cue influence, challenging strong elite-dominance accounts' },
+      { topic: 'interventions/voter-guides-and-information', note: 'supports providing substantive policy information as a lever on opinion' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'evidence that informed citizens reason from policy, not just party' },
+    ],
+  },
+  {
+    slug: 'boudreau-mackenzie-2014-informing-the-electorate',
+    short: 'Boudreau & MacKenzie (2014)',
+    title: 'Boudreau & MacKenzie (2014): Informing the Electorate?',
+    citation: 'Boudreau, Cheryl, and Scott A. MacKenzie. 2014. "Informing the Electorate? How Party Cues and Policy Information Affect Public Opinion about Initiatives." American Journal of Political Science 58(1): 48–62.',
+    url: 'https://doi.org/10.1111/ajps.12054',
+    year: 2014,
+    theme: 'Information & vote choice',
+    summary: 'Survey experiments in a real ballot-initiative context orthogonally manipulate whether citizens receive party cues, policy information, both, or neither. Citizens did not ignore policy information when party cues were present; instead they shifted opinions away from their party\'s position when the policy information gave a compelling reason to do so. The finding qualifies fears that partisan cues crowd out substantive reasoning about ballot measures.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'shows substantive policy information independently shapes ballot-measure opinion even alongside party cues' },
+      { topic: 'key-debates/partisan-effects', note: 'evidence that policy information can override party endorsements' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'bears on whether voters reason substantively or defer blindly to elites' },
+    ],
+  },
+  {
+    slug: 'boudreau-elmendorf-mackenzie-2015-informing-electorates-election-law',
+    short: 'Boudreau, Elmendorf & MacKenzie (2015)',
+    title: 'Boudreau, Elmendorf & MacKenzie (2015): Informing Electorates via Election Law',
+    citation: 'Boudreau, Cheryl, Christopher S. Elmendorf, and Scott A. MacKenzie. 2015. "Informing Electorates via Election Law: An Experimental Study of Partisan Endorsements and Nonpartisan Voter Guides in Local Elections." Election Law Journal 14(1): 2–23.',
+    url: 'https://doi.org/10.1089/elj.2013.0238',
+    year: 2015,
+    theme: 'Information & vote choice',
+    summary: 'Using survey experiments embedded in a real nonpartisan mayoral election, the authors test three legally-provisionable information types: party endorsements, endorsements from prominent officials, and a nonpartisan voter guide describing candidates\' policy positions. Each form of information strengthened the correspondence between voters\' own policy preferences and the candidate they chose, showing election-law tools can meaningfully inform electorates even in low-information nonpartisan races.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'field-realistic experiment showing nonpartisan voter guides and endorsements each improve preference-congruent vote choice' },
+      { topic: 'policy-approaches/overview', note: 'frames the provision of political information as a design choice governable through election law' },
+      { topic: 'key-debates/partisan-effects', note: 'compares partisan endorsements against nonpartisan policy guides as competing information sources' },
+    ],
+  },
+  {
+    slug: 'boudreau-elmendorf-mackenzie-2019-roadmaps-to-representation',
+    short: 'Boudreau, Elmendorf & MacKenzie (2019)',
+    title: 'Boudreau, Elmendorf & MacKenzie (2019): Roadmaps to Representation',
+    citation: 'Boudreau, Cheryl, Christopher S. Elmendorf, and Scott A. MacKenzie. 2019. "Roadmaps to Representation: An Experimental Study of How Voter Education Tools Affect Citizen Decision Making." Political Behavior 41: 1001–1024.',
+    url: 'https://doi.org/10.1007/s11109-018-9480-6',
+    year: 2019,
+    theme: 'Information & vote choice',
+    summary: 'Survey experiments randomly assigned voters to a nonpartisan voter guide, party endorsements, a spatial "map" showing their own and candidates\' ideological positions, or a combined map-plus-endorsements condition. Every information type strengthened the relationship between voters\' policy views and their chosen candidate, with the largest gains among uninformed voters. When maps and party endorsements conflicted, many voters followed the policy-proximity map and defected from their party\'s recommendation.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'tests voter guides and interactive spatial-map tools, finding both raise preference congruence most for uninformed voters' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'direct evidence that education tools move votes toward voters\' own preferences' },
+      { topic: 'key-debates/partisan-effects', note: 'when policy maps conflict with party cues, substantial numbers of voters override the partisan cue' },
+    ],
+  },
+
   {
     slug: 'mcghee-hill-romero-2021-registration-turnout-effects-of-avr',
     short: 'McGhee, Hill & Romero (2021)',
@@ -1072,6 +1193,163 @@ export const PAPERS = [
     contributions: [
       { topic: 'policy-approaches/automatic-voter-registration', note: 'direct evidence that AVR raises registration and turnout, with design (back-end default) mattering most' },
       { topic: 'policy-approaches/overview', note: 'shows reform-design details drive turnout outcomes' },
+    ],
+  },
+
+  // ===== Theme 7: Cues, misinformation & ballot design (what pulls votes away from preferences) =====
+  {
+    slug: 'mcdermott-1998-race-gender-cues',
+    short: 'McDermott (1998)',
+    title: 'McDermott (1998): Race and Gender Cues in Low-Information Elections',
+    citation: 'McDermott, Monika L. 1998. "Race and Gender Cues in Low-Information Elections." Political Research Quarterly 51(4): 895–918. (See also McDermott 1997, AJPS 41(1): 270–283, on candidate gender.)',
+    url: 'https://doi.org/10.1177/106591299805100403',
+    year: 1998,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Using quasi-experimental Los Angeles Times Poll data, McDermott shows that in low-information contests voters treat candidate race and gender as social-group cues, inferring that women and Black candidates are more liberal and of lower socioeconomic status than the average white male candidate. Voters then use these inferred positions as a heuristic — so demographic ballot cues act as information shortcuts that can also bias inferences via stereotype rather than actual candidate positions.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'documents demographic ballot cues as a low-cost information source, and implies substantive guides can counter stereotype-driven cue use' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows low-information demographic heuristics can move voters toward or away from their true preferences' },
+      { topic: 'key-debates/partisan-effects', note: 'non-party cues (race, gender) can independently signal ideology' },
+    ],
+  },
+  {
+    slug: 'kuklinski-2000-misinformation-currency',
+    short: 'Kuklinski et al. (2000)',
+    title: 'Kuklinski et al. (2000): Misinformation and the Currency of Democratic Citizenship',
+    citation: 'Kuklinski, James H., Paul J. Quirk, Jennifer Jerit, David Schwieder, and Robert F. Rich. 2000. "Misinformation and the Currency of Democratic Citizenship." The Journal of Politics 62(3): 790–816.',
+    url: 'https://doi.org/10.1111/0022-3816.00033',
+    year: 2000,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Using survey experiments on welfare, the authors distinguish being uninformed from being confidently misinformed and show that many citizens hold factually wrong beliefs while being highly certain of them. They demonstrate that misinformation, not mere ignorance, distorts collective policy preferences away from what people would prefer if correctly informed, and that simply providing facts often does not dislodge the misperception.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'foundational evidence that confidently held false beliefs (not just low information) push expressed preferences away from informed ones' },
+      { topic: 'interventions/voter-guides-and-information', note: 'shows that giving correct facts alone frequently fails to correct entrenched misinformation' },
+    ],
+  },
+  {
+    slug: 'nyhan-reifler-2010-when-corrections-fail',
+    short: 'Nyhan & Reifler (2010)',
+    title: 'Nyhan & Reifler (2010): When Corrections Fail',
+    citation: 'Nyhan, Brendan, and Jason Reifler. 2010. "When Corrections Fail: The Persistence of Political Misperceptions." Political Behavior 32(2): 303–330.',
+    url: 'https://doi.org/10.1007/s11109-010-9112-2',
+    year: 2010,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Across four experiments, subjects read mock news articles containing a misleading claim with or without a factual correction. Corrections frequently failed to reduce misperceptions among the ideological group most likely to hold them, and in several cases produced a "backfire effect" that increased the misperception.',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'documents that factual corrections can fail or backfire, undermining information provision as a fix for misinformed voting' },
+      { topic: 'key-debates/partisan-effects', note: 'shows correction effectiveness is conditioned by ideology/partisanship' },
+    ],
+  },
+  {
+    slug: 'flynn-nyhan-reifler-2017-nature-origins-misperceptions',
+    short: 'Flynn, Nyhan & Reifler (2017)',
+    title: 'Flynn, Nyhan & Reifler (2017): The Nature and Origins of Misperceptions',
+    citation: 'Flynn, D. J., Brendan Nyhan, and Jason Reifler. 2017. "The Nature and Origins of Misperceptions: Understanding False and Unsupported Beliefs About Politics." Advances in Political Psychology 38(S1): 127–150.',
+    url: 'https://doi.org/10.1111/pops.12394',
+    year: 2017,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'A review and synthesis arguing that political misperceptions are largely rooted in directionally motivated reasoning, which makes people resistant to corrective information about controversial issues and figures. It maps the origins, prevalence, and persistence of false beliefs and explains why corrective interventions have limited and conditional effects.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'theorizes how motivated reasoning keeps beliefs (and thus vote choice) misaligned with the facts' },
+      { topic: 'interventions/overview', note: 'synthesizes why information-based corrective interventions are constrained' },
+    ],
+  },
+  {
+    slug: 'berinsky-2017-rumors-health-care-reform',
+    short: 'Berinsky (2017)',
+    title: 'Berinsky (2017): Rumors and Health Care Reform',
+    citation: 'Berinsky, Adam J. 2017. "Rumors and Health Care Reform: Experiments in Political Misinformation." British Journal of Political Science 47(2): 241–262.',
+    url: 'https://doi.org/10.1017/S0007123415000186',
+    year: 2017,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Through experiments on rumors about the 2010 health care reform ("death panels"), Berinsky shows that rumors gain power through familiarity, so directly repeating a rumor to refute it can increase belief in it via fluency. Corrections from surprising or unlikely sources (e.g., co-partisan elites contradicting expectations) were more effective at getting citizens to reject rumors than ordinary rebuttals.',
+    contributions: [
+      { topic: 'interventions/digital-and-social-media-ads', note: 'shows repetition of misinformation increases its acceptance, informing message design in information campaigns' },
+      { topic: 'key-debates/partisan-effects', note: 'demonstrates source credibility/partisanship shapes whether corrections work' },
+    ],
+  },
+  {
+    slug: 'ho-imai-2008-ballot-order',
+    short: 'Ho & Imai (2008)',
+    title: 'Ho & Imai (2008): Estimating Causal Effects of Ballot Order',
+    citation: 'Ho, Daniel E., and Kosuke Imai. 2008. "Estimating Causal Effects of Ballot Order from a Randomized Natural Experiment: The California Alphabet Lottery, 1978–2002." Public Opinion Quarterly 72(2): 216–240.',
+    url: 'https://doi.org/10.1093/poq/nfn018',
+    year: 2008,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Exploiting California\'s legally mandated randomization of candidate name order, the authors estimate causal ballot-order effects across statewide elections. Being listed first significantly boosts vote share — large enough that order could have changed the winner in roughly 12% of primary races — though in general elections the effect is concentrated among minor-party candidates.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'quantifies how a ballot-position artifact, not preference, shifts votes' },
+      { topic: 'policy-approaches/overview', note: 'rigorous evidence supporting randomized ballot ordering as an administrative safeguard' },
+    ],
+  },
+  {
+    slug: 'meredith-salant-2013-ballot-order-effects',
+    short: 'Meredith & Salant (2013)',
+    title: 'Meredith & Salant (2013): Causes and Consequences of Ballot Order Effects',
+    citation: 'Meredith, Marc, and Yuval Salant. 2013. "On the Causes and Consequences of Ballot Order Effects." Political Behavior 35(1): 175–197.',
+    url: 'https://doi.org/10.1007/s11109-011-9189-2',
+    year: 2013,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Using California city council and school board elections with rotated/randomized order, the authors find candidates listed first receive roughly 4–5 percentage points more votes than expected if listed later. The first-position advantage is larger in races with more candidates and for higher-quality candidates, and they use the pattern to adjudicate among psychological mechanisms.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows a substantial position-driven distortion of outcomes independent of voter preference' },
+      { topic: 'policy-approaches/overview', note: 'informs ballot-rotation policy to neutralize position advantage' },
+    ],
+  },
+  {
+    slug: 'wand-2001-butterfly-ballot',
+    short: 'Wand et al. (2001)',
+    title: 'Wand et al. (2001): The Butterfly Did It',
+    citation: 'Wand, Jonathan N., Kenneth W. Shotts, Jasjeet S. Sekhon, Walter R. Mebane Jr., Michael C. Herron, and Henry E. Brady. 2001. "The Butterfly Did It: The Aberrant Vote for Buchanan in Palm Beach County, Florida." American Political Science Review 95(4): 793–810.',
+    url: 'https://doi.org/10.1017/S000305540040002X',
+    year: 2001,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Analyzing county-level returns across 3,053 U.S. counties plus precinct and absentee patterns, the authors show Palm Beach County\'s butterfly ballot produced a uniquely anomalous excess vote for Pat Buchanan in the 2000 election. They estimate the confusing layout caused more than 2,000 Democratic-leaning voters to mistakenly vote for Buchanan — more than Bush\'s certified statewide margin.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'canonical case where ballot design alone caused votes to diverge from voters\' actual intent' },
+      { topic: 'policy-approaches/overview', note: 'motivates ballot-design and usability standards in election administration' },
+    ],
+  },
+  {
+    slug: 'kimball-kropf-2005-ballot-design',
+    short: 'Kimball & Kropf (2005)',
+    title: 'Kimball & Kropf (2005): Ballot Design and Unrecorded Votes',
+    citation: 'Kimball, David C., and Martha Kropf. 2005. "Ballot Design and Unrecorded Votes on Paper-Based Ballots." Public Opinion Quarterly 69(4): 508–529.',
+    url: 'https://doi.org/10.1093/poq/nfi054',
+    year: 2005,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Examining paper ballots across many U.S. jurisdictions, the authors show that specific design features (instructions, layout, candidate placement, punch-card vs. optical scan) systematically affect rates of unrecorded (residual) votes. Poor design produces more lost votes, especially in down-ballot races and among disadvantaged voters, so votes fail to register voter intent.',
+    contributions: [
+      { topic: 'policy-approaches/overview', note: 'directly links measurable design choices to lost/unrecorded votes, guiding ballot-design standards' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows usability failures cause intended votes not to be counted' },
+    ],
+  },
+  {
+    slug: 'herrnson-2012-ballot-type-voter-errors',
+    short: 'Herrnson, Hanmer & Niemi (2012)',
+    title: 'Herrnson, Hanmer & Niemi (2012): The Impact of Ballot Type on Voter Errors',
+    citation: 'Herrnson, Paul S., Michael J. Hanmer, and Richard G. Niemi. 2012. "The Impact of Ballot Type on Voter Errors." American Journal of Political Science 56(3): 716–730.',
+    url: 'https://doi.org/10.1111/j.1540-5907.2011.00579.x',
+    year: 2012,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'Using controlled usability experiments in which participants had assigned voting intentions, the authors compare ballot formats and find voters make more errors on office-bloc ballots that include a straight-party option than on standard office-bloc ballots. Wrong-candidate errors substantially outnumbered unintentional undervotes, showing certain designs actively cause votes that diverge from intent.',
+    contributions: [
+      { topic: 'policy-approaches/overview', note: 'experimental evidence on which ballot formats minimize voter error' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'isolates ballot design as a cause of votes not matching intended choices' },
+    ],
+  },
+  {
+    slug: 'barber-2017-status-quo-bias-ballot-wording',
+    short: 'Barber et al. (2017)',
+    title: 'Barber et al. (2017): Status Quo Bias in Ballot Wording',
+    citation: 'Barber, Michael, David Gordon, Ryan Hill, and Joseph Price. 2017. "Status Quo Bias in Ballot Wording." Journal of Experimental Political Science 4(2): 151–160.',
+    url: 'https://doi.org/10.1017/XPS.2017.9',
+    year: 2017,
+    theme: 'Cues, misinformation & ballot design',
+    summary: 'In a survey experiment randomly assigning different ballot wordings for five policies affecting minority-group rights, the authors test how framing which side represents the "status quo" shifts votes. They find that the wording/framing of the measure moves support, showing that a purely presentational choice — not the underlying policy — can alter voters\' expressed preferences.',
+    contributions: [
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows misleading framing in ballot wording pushes votes away from underlying preferences' },
+      { topic: 'policy-approaches/overview', note: 'argues neutral, standardized ballot-measure wording matters for fair outcomes' },
     ],
   },
 ];
