@@ -9,6 +9,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DOCS = join(ROOT, 'src', 'content', 'docs');
 const RESEARCH = join(DOCS, 'research');
 
+// Must match `base` in astro.config.mjs (GitHub Pages project subpath).
+const BASE = '/voter-education-turnout-wiki';
+
 const y = (v) => JSON.stringify(v); // JSON strings are valid YAML scalars
 
 function firstSentence(text) {
@@ -33,7 +36,7 @@ for (const p of PAPERS) {
 mkdirSync(RESEARCH, { recursive: true });
 for (const p of PAPERS) {
   const contribs = p.contributions
-    .map((c) => `- [${TOPIC_LABELS[c.topic]}](/${c.topic}/) — ${c.note}`)
+    .map((c) => `- [${TOPIC_LABELS[c.topic]}](${BASE}/${c.topic}/) — ${c.note}`)
     .join('\n');
   const body = `---
 title: ${y(p.title)}
@@ -64,7 +67,7 @@ for (const t of THEMES) {
   const rows = byTheme
     .get(t)
     .sort((a, b) => a.year - b.year)
-    .map((p) => `- [${p.short}](/research/${p.slug}/) — ${firstSentence(p.summary)}`)
+    .map((p) => `- [${p.short}](${BASE}/research/${p.slug}/) — ${firstSentence(p.summary)}`)
     .join('\n');
   themeSections += `## ${t}\n\n${rows}\n\n`;
 }
@@ -104,11 +107,14 @@ for (const [topic, entries] of byTopic) {
   let content = readFileSync(file, 'utf8');
   entries.sort((a, b) => a.p.year - b.p.year);
   const rows = entries
-    .map((e) => `- [${e.p.short}](/research/${e.p.slug}/) — ${e.note}`)
+    .map((e) => `- [${e.p.short}](${BASE}/research/${e.p.slug}/) — ${e.note}`)
     .join('\n');
-  const keyResearch = `## Key Research\n\nStudies from the [Research Library](/research/overview/) most relevant to this topic:\n\n${rows}\n`;
+  const keyResearch = `## Key Research\n\nStudies from the [Research Library](${BASE}/research/overview/) most relevant to this topic:\n\n${rows}\n`;
 
-  const marker = content.indexOf('## Further Reading');
+  // Replace an existing "Key Research" or original "Further Reading" section
+  // (both live at the end of the page), else append.
+  let marker = content.indexOf('## Key Research');
+  if (marker === -1) marker = content.indexOf('## Further Reading');
   if (marker !== -1) {
     content = content.slice(0, marker) + keyResearch;
   } else {
