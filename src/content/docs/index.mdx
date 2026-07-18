@@ -14,7 +14,7 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## About this wiki
 
@@ -25,20 +25,24 @@ underlying preferences (representation). Educating voters and turning them out a
 same goal, and interventions that succeed at one do not always succeed at the other.
 
 <CardGrid>
-	<Card title="Policy Approaches" icon="setting">
-		System-level rules — registration, ballot access, civic-education mandates, and
-		compulsory voting — that shape the environment in which voters learn and vote.
-	</Card>
-	<Card title="Interventions" icon="rocket">
-		Field-tested tactics — canvassing, mail, calls, texts, voter guides, and civics
-		curricula — with evidence on their effect sizes and cost-effectiveness.
-	</Card>
-	<Card title="Key Debates" icon="random">
-		Unresolved questions: education vs. mobilization, informed voting vs. maximum
-		turnout, and whether interventions favor particular parties.
-	</Card>
-	<Card title="Evidence-first" icon="approve-check">
-		Pages summarize what the research shows, where findings conflict, and which
-		questions remain open — with tables comparing approaches side by side.
-	</Card>
+	<LinkCard
+		title="Policy Approaches"
+		href="/voter-education-turnout-wiki/policy-approaches/overview/"
+		description="System-level rules — registration, ballot access, civic-education mandates, and compulsory voting — that shape the environment in which voters learn and vote."
+	/>
+	<LinkCard
+		title="Interventions"
+		href="/voter-education-turnout-wiki/interventions/overview/"
+		description="Field-tested tactics — canvassing, mail, calls, texts, voter guides, and civics curricula — with evidence on their effect sizes and cost-effectiveness."
+	/>
+	<LinkCard
+		title="Key Debates"
+		href="/voter-education-turnout-wiki/key-debates/informed-voting-vs-turnout/"
+		description="Unresolved questions: education vs. mobilization, informed voting vs. maximum turnout, and whether interventions favor particular parties."
+	/>
+	<LinkCard
+		title="Research"
+		href="/voter-education-turnout-wiki/research/overview/"
+		description="Every page summarizes what the research shows, where findings conflict, and which questions remain open — with tables comparing approaches side by side."
+	/>
 </CardGrid>
