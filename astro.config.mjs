@@ -6,19 +6,24 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Voter Education and Voter Turnout',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Policy Approaches',
+					items: [{ autogenerate: { directory: 'policy-approaches' } }],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Interventions',
+					items: [{ autogenerate: { directory: 'interventions' } }],
+				},
+				{
+					label: 'Key Debates',
+					items: [{ autogenerate: { directory: 'key-debates' } }],
+				},
+				{
+					label: 'Research',
+					items: [{ autogenerate: { directory: 'research' } }],
 				},
 			],
 		}),

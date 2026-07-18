@@ -1,40 +1,44 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Voter Education and Voter Turnout
+description: A research wiki on how voter education shapes voter turnout and how well election outcomes match voter preferences.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: A research wiki on how voter education affects turnout — and how well the votes cast match what voters actually want.
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Explore Interventions
+      link: /interventions/overview/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Read the Key Debates
+      link: /key-debates/information-vs-mobilization/
+      icon: open-book
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## About this wiki
+
+This wiki surveys the empirical and theoretical research on **voter education** and its
+relationship to two outcomes that are often conflated but are analytically distinct:
+*whether* people vote (turnout) and *how well* the resulting votes reflect voters'
+underlying preferences (representation). Educating voters and turning them out are not the
+same goal, and interventions that succeed at one do not always succeed at the other.
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Policy Approaches" icon="setting">
+		System-level rules — registration, ballot access, civic-education mandates, and
+		compulsory voting — that shape the environment in which voters learn and vote.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Interventions" icon="rocket">
+		Field-tested tactics — canvassing, mail, calls, texts, voter guides, and civics
+		curricula — with evidence on their effect sizes and cost-effectiveness.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Key Debates" icon="random">
+		Unresolved questions: education vs. mobilization, informed voting vs. maximum
+		turnout, and whether interventions favor particular parties.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Evidence-first" icon="approve-check">
+		Pages summarize what the research shows, where findings conflict, and which
+		questions remain open — with tables comparing approaches side by side.
 	</Card>
 </CardGrid>
