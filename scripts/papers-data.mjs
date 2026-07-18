@@ -899,6 +899,22 @@ export const PAPERS = [
     ],
   },
 
+  {
+    slug: 'boudreau-colner-mackenzie-2021-voter-guides-narrow-gap',
+    short: 'Boudreau, Colner & MacKenzie (2021)',
+    title: 'Boudreau, Colner & MacKenzie (2021): Voter Guides Narrow the Informed–Uninformed Gap',
+    citation: 'Boudreau, Cheryl, Jonathan Colner, and Scott MacKenzie. 2021. "Ranked-Choice Voting and Political Expression: Voter Guides Narrow the Gap between Informed and Uninformed Citizens." Report in the Evaluating the Effects of Ranked-Choice Voting series. Washington, DC: New America. (Also circulated as SSRN Working Paper No. 3786972.)',
+    url: 'https://www.newamerica.org/insights/evaluating-the-effects-of-ranked-choice-voting/ranked-choice-voting-and-political-expression-voter-guides-narrow-the-gap-between-informed-and-uninformed-citizens-cheryl-boudreau-jonathan-colner-and-scott-mackenzie/',
+    year: 2021,
+    theme: 'Information & vote choice',
+    summary: 'A survey experiment with 1,286 San Francisco residents fielded online before the November 2020 election, focused on the ranked-choice Board of Supervisors races. Respondents classified as informed or uninformed were randomly given either an issue-oriented voter guide (candidates\' positions on six issues) or no information. The guide substantially helped uninformed voters and barely moved informed voters, narrowing the gap: it raised uninformed voters\' use of their rankings by roughly 5–8 points and strengthened the link between rankings and policy views (first-choice policy agreement rose from 53.9% to 60.7% among the uninformed). (New America report / SSRN working paper — not peer-reviewed.)',
+    contributions: [
+      { topic: 'interventions/voter-guides-and-information', note: 'experimental evidence that an issue voter guide disproportionately helps uninformed voters, narrowing the informed/uninformed gap' },
+      { topic: 'key-debates/informed-voting-vs-turnout', note: 'shows information tools can move uninformed voters\' choices closer to their policy views, improving the match between votes and preferences' },
+      { topic: 'key-debates/information-vs-mobilization', note: 'an information intervention that changes the quality and expression of votes rather than turnout' },
+    ],
+  },
+
   // ===== Theme 6: Registration, access & partisan effects =====
   {
     slug: 'thompson-2020-universal-vote-by-mail-no-partisan-effect',
