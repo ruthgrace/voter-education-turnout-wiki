@@ -28,6 +28,9 @@ jobs:
         # Detects the package manager, installs deps, runs `astro build`,
         # and uploads the dist/ output as a Pages artifact.
         uses: withastro/action@v3
+        with:
+          # Astro 7 requires Node >=22.12; the action defaults to Node 20.
+          node-version: 22
 
   deploy:
     needs: build
